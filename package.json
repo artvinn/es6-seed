@@ -4,11 +4,11 @@
   "description": "Pixi.js ES6 template",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "clean": "rimraf build/*",
-    "minify": "uglifyjs -c -m -o build/bundle.js -- build/bundle.js",
-    "build": "npm run clean && browserify index.js > build/bundle.js && npm run minify",
-    "watch": "budo index.js:build/bundle.js -o -l"
+    "clean": "rimraf release/*",
+    "copy": "copyfiles index.prod.html resources/** release",
+    "bundle": "browserify index.js | uglifyjs -mc > release/bundle.min.js",
+    "release": "npm run clean && npm run copy && npm run bundle",
+    "watch": "budo index.js:bundle.js -o -l"
   },
   "browserify": {
     "transform": [
@@ -33,6 +33,7 @@
     "babelify": "^7.3.0",
     "browserify": "^13.0.1",
     "budo": "^8.3.0",
+    "copyfiles": "^1.0.0",
     "rimraf": "^2.5.3",
     "uglify-js": "^2.7.0"
   },
