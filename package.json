@@ -7,7 +7,8 @@
     "clean": "rimraf release/*",
     "copy": "copyfiles index.prod.html resources/** release",
     "bundle": "browserify index.js | uglifyjs -mc > release/bundle.min.js",
-    "release": "npm run clean && npm run copy && npm run bundle",
+    "zip": "bestzip build.zip release/*",
+    "release": "npm run clean && npm run copy && npm run bundle && npm run zip",
     "watch": "budo index.js:bundle.js -o -l"
   },
   "browserify": {
