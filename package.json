@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "clean": "rimraf release/*",
-    "copy": "copyfiles index.prod.html resources/** release",
-    "bundle": "browserify index.js | uglifyjs -mc > release/bundle.min.js",
+    "copy": "copyfiles index.html resources/** release",
+    "bundle": "browserify index.js | uglifyjs -mc > release/bundle.js",
     "zip": "bestzip build.zip release/*",
     "release": "npm run clean && npm run copy && npm run bundle && npm run zip",
-    "watch": "budo index.js:bundle.js -o -l"
+    "watch": "budo index.js:bundle.js -o -l --wg resources/**/*"
   },
   "browserify": {
     "transform": [
@@ -40,6 +40,6 @@
     "uglify-js": "^2.7.0"
   },
   "dependencies": {
-    "pixi.js": "^3.0.11"
+    "pixi.js": "^4.1.0"
   }
 }
