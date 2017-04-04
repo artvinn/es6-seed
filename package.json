@@ -8,7 +8,7 @@
     "copy": "copyfiles index.html assets/** prod",
     "bundle": "browserify index.js | uglifyjs -mc > prod/bundle.js",
     "zip": "bestzip build.zip prod/*",
-    "prod": "npm run clean && npm run copy && npm run bundle && npm run zip",
+    "prod": "npm run clean && npm run copy && webpack -p && npm run zip",
     "watch": "webpack-dev-server --open"
   },
   "author": "Artjom Vinnikov (https://github.com/Zenext)",
