@@ -4,11 +4,11 @@
   "description": "Pixi.js ES6 template",
   "main": "index.js",
   "scripts": {
-    "clean": "rimraf release/*",
-    "copy": "copyfiles index.html resources/** release",
-    "bundle": "browserify index.js | uglifyjs -mc > release/bundle.js",
-    "zip": "bestzip build.zip release/*",
-    "release": "npm run clean && npm run copy && npm run bundle && npm run zip",
+    "clean": "rimraf prod/*",
+    "copy": "copyfiles index.html assets/** prod",
+    "bundle": "browserify index.js | uglifyjs -mc > prod/bundle.js",
+    "zip": "bestzip build.zip prod/*",
+    "prod": "npm run clean && npm run copy && npm run bundle && npm run zip",
     "watch": "webpack-dev-server --open"
   },
   "author": "Artjom Vinnikov (https://github.com/Zenext)",
