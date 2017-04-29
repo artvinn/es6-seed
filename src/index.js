@@ -6,6 +6,6 @@ window.onload = function() {
         console.log(cont);
     }, 4000);  
 
-    console.log(321)
+    console.log(2);
 }
 
