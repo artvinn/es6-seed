@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "rimraf prod/*",
     "copy": "copyfiles index.html assets/** prod",
-    "bundle": "browserify index.js | uglifyjs -mc > prod/bundle.js",
+    "bundle": "webpack",
     "zip": "bestzip build.zip prod/*",
     "prod": "npm run clean && npm run copy && webpack -p && npm run zip",
     "watch": "webpack-dev-server --open"

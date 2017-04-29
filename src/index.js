@@ -5,5 +5,7 @@ window.onload = function() {
     setTimeout(() => {
         console.log(cont);
     }, 4000);  
+
+    console.log(321)
 }
 
