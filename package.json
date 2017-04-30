@@ -4,11 +4,7 @@
   "description": "Pixi.js ES6 template",
   "main": "index.js",
   "scripts": {
-    "clean": "rimraf prod/*",
-    "copy": "copyfiles index.html assets/** prod",
-    "bundle": "webpack",
-    "zip": "bestzip build.zip prod/*",
-    "prod": "npm run clean && npm run copy && webpack -p && npm run zip",
+    "prod": "NODE_ENV='production' webpack -p",
     "watch": "webpack-dev-server --open"
   },
   "author": "Artjom Vinnikov (https://github.com/Zenext)",
@@ -23,10 +19,6 @@
     "babel-preset-env": "^1.3.2",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
-    "bestzip": "^1.1.3",
-    "copyfiles": "^1.0.0",
-    "rimraf": "^2.5.3",
-    "uglify-js": "^2.7.0",
     "webpack": "^2.3.3",
     "webpack-dev-server": "^2.4.2"
   },

@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 const path = require("path");
 
-module.exports = {
+const config = {
   entry: {
     main: "./src/index.js"
   },
@@ -16,15 +16,6 @@ module.exports = {
     modules: ['./node_modules'],
     extensions: [".js"]
   },
-
-  devServer: {
-    hot: true,
-    inline: true,
-    host: "localhost",
-    port: 8080
-  },
-
-  devtool: "inline-source-map",
 
   module: {
     rules: [
@@ -43,7 +34,6 @@ module.exports = {
   },
 
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
       minChunks: function (module) {
@@ -57,3 +47,18 @@ module.exports = {
     })
   ]
 };
+
+if (process.env.NODE_ENV === 'production') {
+  config.plugins.push(new webpack.optimize.UglifyJsPlugin())
+} else {
+  config.devtool = "inline-source-map"
+  config.plugins.push(new webpack.HotModuleReplacementPlugin())
+  config.devServer = {
+    hot: true,
+    inline: true,
+    host: "localhost",
+    port: 8080
+  };
+}
+
+module.exports = config;
