@@ -24,16 +24,18 @@ module.exports = {
     port: 8080
   },
 
+  devtool: "inline-source-map",
+
   module: {
     rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
+          loader: "babel-loader?cacheDirectory=true",
           options: {
             cacheDirectory: true,
-            presets: ['env']
+            presets: ['env', ["es2015", { "loose": true }], 'stage-2']
           }
         }
       }

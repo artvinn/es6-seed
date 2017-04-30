@@ -6,6 +6,7 @@ window.onload = function() {
         console.log(cont);
     }, 4000);  
 
-    console.log(2);
+    console.log("Artjom")
+    console.log(123)
 }
 
