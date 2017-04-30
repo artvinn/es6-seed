@@ -1,18 +1,29 @@
 {
-  "name": "js-pixi-es6",
+  "name": "pixi-es6-boilerplate",
   "version": "1.0.0",
-  "description": "Pixi.js ES6 template",
-  "main": "index.js",
+  "description": "Pixi.js boilerplate with ES6(babel) and webpack",
+  "main": "./src/index.js",
   "scripts": {
-    "prod": "NODE_ENV='production' webpack -p",
-    "watch": "webpack-dev-server --open"
+    "build": "NODE_ENV='production' webpack -p",
+    "start": "webpack-dev-server --open"
   },
-  "author": "Artjom Vinnikov (https://github.com/Zenext)",
-  "license": "ISC",
+  "author": "Artjom Vinnikov (https://github.com/artvinn)",
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Zenext/js-pixi-es6"
+    "url": "https://github.com/artvinn/pixi-es6-boilerplate"
   },
+  "keywords": [
+    "pixi",
+    "pixi.js",
+    "boilerplate",
+    "template",
+    "babel",
+    "webpack",
+    "ES6",
+    "es2015",
+    "hot module replacement"
+  ],
   "devDependencies": {
     "babel-core": "^6.24.0",
     "babel-loader": "^6.4.1",
