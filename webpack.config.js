@@ -49,7 +49,13 @@ const config = {
 };
 
 if (process.env.NODE_ENV === 'production') {
-  config.plugins.push(new webpack.optimize.UglifyJsPlugin())
+  config.plugins.push(new webpack.optimize.UglifyJsPlugin({
+    comments: false,
+    compress: {
+      warnings: false,
+      drop_console: true
+    }
+  }))
 } else {
   config.devtool = "inline-source-map"
   config.plugins.push(new webpack.HotModuleReplacementPlugin())
