@@ -32,8 +32,8 @@ Sparky.task("clean", () => {
 
 Sparky.task("watch:static", () => {
   return Sparky
-        .watch(["./assets", "index.html"], { base: "./src" })
-        .dest("./dist");
-})
+    .watch(["./assets", "index.html"], { base: "./src" })
+    .dest("./dist");
+});
 
 Sparky.task("default", ["clean", "watch:static", "dev-server"], () => fuse.run());
