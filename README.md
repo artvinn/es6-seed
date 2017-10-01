@@ -10,4 +10,4 @@ yarn watch
 
 `yarn watch` will startup the development server that watches for file changes and reloads the page.
 
-[FuseBox][https://github.com/fuse-box/fuse-box] is used for bundling, serving and running tasks.
+[FuseBox](https://github.com/fuse-box/fuse-box) is used for bundling, serving and running tasks.
