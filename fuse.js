@@ -10,7 +10,7 @@ const fuse = FuseBox.init({
     BabelPlugin({
       config: {
         sourceMaps: true,
-        presets: ["env"]
+        presets: ["env", "babel-preset-stage-2"]
       }
     })
   ]

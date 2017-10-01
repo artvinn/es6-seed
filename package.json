@@ -1,7 +1,7 @@
 {
-  "name": "pixi-es6-seed",
+  "name": "es6-seed",
   "version": "1.0.0",
-  "description": "Pixi.js seed project with ES6 support",
+  "description": "Seed javascript project with ES6 support(fuse-box)",
   "main": "./src/js/index.js",
   "scripts": {
     "watch": "node fuse.js"
@@ -10,11 +10,9 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/artvinn/pixi-es6-seed"
+    "url": "https://github.com/artvinn/es6-seed"
   },
   "keywords": [
-    "pixi.js",
-    "pixi.js seed",
     "babel",
     "fusebox",
     "ES6",
@@ -23,9 +21,7 @@
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.0",
+    "babel-preset-stage-2": "^6.24.1",
     "fuse-box": "2.3.1-beta.10"
-  },
-  "dependencies": {
-    "pixi.js": "^4.5.6"
   }
 }
