@@ -1,6 +1,6 @@
 # ES6 project bolerplate
 
-Basic development environment for my ES6 project.
+Basic development environment for my ES6 projects.
 
 To use simply clone the repository and run:
 ```
