@@ -27,6 +27,7 @@
     // Stylistic issues
     "no-lonely-if": 2,
     "indent": [2, 2],
+    "quotes": [2, "double"],
 
     // Variables
     "no-undefined": 2,
