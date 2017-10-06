@@ -32,7 +32,7 @@ Sparky.task("clean", () => {
 
 Sparky.task("watch:static", () => {
   return Sparky
-    .watch(["./assets", "index.html"], { base: "./src" })
+    .watch(["./assets/**/*", "index.html"], { base: "./src" })
     .dest("./dist");
 });
 
